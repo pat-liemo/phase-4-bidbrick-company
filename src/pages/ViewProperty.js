@@ -13,7 +13,7 @@ function ViewProperty() {
   const [buttonActive, setButtonActive] = useState(false);
 
   useEffect(function() {
-    fetch(`http://localhost:3000/properties/${id}`)
+    fetch(`https://auction-react-rafd.onrender.com/properties/${id}`)
     .then(function(response) {
       return response.json();
     })
@@ -80,7 +80,7 @@ function ViewProperty() {
                       alert("You cannot bid lower than the highest bid");
                     }
                     else {
-                    fetch(`http://localhost:3000/properties/${id}`, {
+                    fetch(`https://auction-react-rafd.onrender.com/properties/${id}`, {
                       method: "PATCH",
                       headers: {
                         "Content-Type": "application/json",
@@ -105,7 +105,7 @@ function ViewProperty() {
             <div>
               <button type="button" className="btn btn-primary me-5" onClick={placeBid} disabled={buttonActive}>Bid</button>
               <button type="button" className="btn btn-danger ms-5" onClick={() => {
-                fetch(`http://localhost:3000/properties/${id}`, {
+                fetch(`https://auction-react-rafd.onrender.com/${id}`, {
                   method: "DELETE"
                 })
                 .then(function(response) {

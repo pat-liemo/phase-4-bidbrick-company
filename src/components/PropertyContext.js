@@ -6,7 +6,7 @@ export function PropertyProvider({ children }) {
   const [properties, setProperties] = useState([]);
 
   useEffect(function() {
-    fetch("http://localhost:3000/properties")
+    fetch("https://auction-react-rafd.onrender.com/properties")
     .then(function(response) {
       return response.json();
     })

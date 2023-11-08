@@ -31,7 +31,7 @@ function Form() {
         image: imageUrl,
       };
 
-      fetch("http://localhost:3000/properties", {
+      fetch("https://auction-react-rafd.onrender.com/properties", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
