@@ -3,7 +3,7 @@ import Property from './Property';
 import { usePropertyContext } from '../components/PropertyContext';
 
 function PropertyList() {
-  const { setProperties } = usePropertyContext();
+  // const { setProperties } = usePropertyContext();
   const { properties } = usePropertyContext();
   const [loading, setLoading] = useState(true);
 
