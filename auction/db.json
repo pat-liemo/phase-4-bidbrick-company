@@ -81,7 +81,7 @@
       "bedrooms": 3,
       "bathrooms": 2,
       "size": "1,800 sqft",
-      "price": "850000",
+      "price": "950000",
       "image": "https://i.pinimg.com/564x/9b/5b/c7/9b5bc75d7f14a5e54ec14db98b27e9a8.jpg"
     },
     {
@@ -191,30 +191,6 @@
       "size": "2,800 sqft",
       "price": 1800000,
       "image": "https://i.pinimg.com/564x/80/e2/93/80e293b144175738141db62be2ace589.jpg"
-    },
-    {
-      "title": "Pat",
-      "description": "Perfection",
-      "location": "Malindi",
-      "type": "Mansion",
-      "bedrooms": "5",
-      "bathrooms": "6",
-      "size": "3000sqft",
-      "price": "4000000",
-      "image": "https://i.pinimg.com/564x/fb/fb/08/fbfb08829cc1ae147f3e927e44c0f2e7.jpg",
-      "id": 17
-    },
-    {
-      "title": "New",
-      "description": "Nice",
-      "location": "Kenya",
-      "type": "Penthouse",
-      "bedrooms": "4",
-      "bathrooms": "4",
-      "size": "1000sqft",
-      "price": "1000000",
-      "image": "https://i.pinimg.com/564x/fb/fb/08/fbfb08829cc1ae147f3e927e44c0f2e7.jpg",
-      "id": 18
     }
   ]
 }

@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
-import { PropertyContext } from '../components/PropertyList';
 import { usePropertyContext } from '../components/PropertyContext';
 
 function Form() {
   const { setProperties } = usePropertyContext();
+  const { properties } = usePropertyContext();
 
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
@@ -15,8 +15,6 @@ function Form() {
   const [type, setType] = useState("");
   const [type1, setType1] = useState("");
   const [price, setPrice] = useState("");
-
-  const propertyList = useContext(PropertyContext);
 
   function addProperty(event) {
       event.preventDefault();
@@ -44,8 +42,18 @@ function Form() {
         return response.json();
       })
       .then(function(data) {
-        const newPropertyList = [...propertyList, data];
+        const newPropertyList = [...properties, data];
         setProperties(newPropertyList);
+
+        setTitle("");
+        setLocation("");
+        setImageUrl("");
+        setBed("");
+        setBath("");
+        setDescription("");
+        setSize("");
+        setType("");
+        setPrice("");
       })
   }
 

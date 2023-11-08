@@ -2,25 +2,17 @@ import React, { createContext, useEffect, useState } from 'react'
 import Property from './Property';
 import { usePropertyContext } from '../components/PropertyContext';
 
-export const PropertyContext = createContext();
-
 function PropertyList() {
-  // const [properties, setProperties] = useState([]);
   const { setProperties } = usePropertyContext();
   const { properties } = usePropertyContext();
   const [loading, setLoading] = useState(true);
 
-  useEffect(function() {
-    fetch("http://localhost:3000/properties")
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      setProperties(data)
-      setLoading(false)
-    }) 
-  },[])
-
+  useEffect(() => {
+    if (properties.length > 0) {
+      setLoading(false);
+    }
+  }, [properties]);
+  
   if (loading) {
     return (
       <div className="d-flex justify-content-center">
@@ -31,19 +23,13 @@ function PropertyList() {
     )
   }
 
-  const propertyList = properties.map(function(property) {
-    return (
-      <Property key={property.id} property={property}/>
-    )
-  })
-
   return (
-    <PropertyContext.Provider value={propertyList}>
-      <div className="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-center">
-        {propertyList}
-      </div>
-    </PropertyContext.Provider>
-  )
+    <div className="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-center">
+      {properties.map((property) => (
+        <Property key={property.id} property={property} />
+      ))}
+    </div>
+  );
 }
 
 export default PropertyList;

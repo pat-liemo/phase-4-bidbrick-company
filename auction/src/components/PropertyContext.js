@@ -1,9 +1,20 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
-const PropertyContext = createContext();
+export const PropertyContext = createContext();
 
 export function PropertyProvider({ children }) {
   const [properties, setProperties] = useState([]);
+
+  useEffect(function() {
+    fetch("http://localhost:3000/properties")
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      setProperties(data)
+      
+    }) 
+  },[])
 
   return (
     <PropertyContext.Provider value={{ properties, setProperties }}>
