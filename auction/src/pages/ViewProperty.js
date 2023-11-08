@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import { usePropertyContext } from '../components/PropertyContext';
 
 function ViewProperty() {
+  const { setProperties } = usePropertyContext();
+  const { properties } = usePropertyContext();
+
   const {id} = useParams();
   const [content, setContent] = useState({});
   const [newBid, setNewBid] = useState("");
@@ -92,12 +96,29 @@ function ViewProperty() {
                       setContent(data);
                     })
                   }
-                  }}>Submit</button>
+                  }}>
+                    Submit
+                  </button>
                   <br/><br/>
               </form>
             }
-            <div className="btn-group" role="group" aria-label="Basic example">
-              <button type="button" className="btn btn-primary" onClick={placeBid} disabled={buttonActive}>Bid</button>
+            <div>
+              <button type="button" className="btn btn-primary me-5" onClick={placeBid} disabled={buttonActive}>Bid</button>
+              <button type="button" className="btn btn-danger ms-5" onClick={(id) => {
+                fetch(`http://localhost:3000/properties/${id}`, {
+                  method: "DELETE"
+                })
+                .then(function(response) {
+                  return response.json();
+                })
+                .then(function(data) {
+                  const updatedProperties = properties.filter(function(property) {
+                    return property.id !== id
+                  })
+
+                  setProperties(updatedProperties)
+                })
+              }} >Delete</button>
             </div>
           </div>
         </div>
