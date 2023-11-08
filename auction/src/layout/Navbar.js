@@ -1,7 +1,22 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
+import { usePropertyContext } from '../components/PropertyContext';
+
 
 function Navbar() {
+  const { setProperties } = usePropertyContext();
+  const { properties } = usePropertyContext();
+
+  function searchHandler(event) {
+    const searchTerm = event.target.value.toLowerCase();
+
+    const filteredProperties = properties.filter(function(property) {
+        return property.type.toLowerCase().includes(searchTerm);
+    })
+
+    setProperties(filteredProperties);
+}
+
   return (
     <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-light p-4">
@@ -29,7 +44,7 @@ function Navbar() {
                     </li>
                 </ul>
                 <form className="d-flex">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={searchHandler}/>
                     <button className="btn btn-outline-info" type="submit">Search</button>
                 </form>
                 </div>
