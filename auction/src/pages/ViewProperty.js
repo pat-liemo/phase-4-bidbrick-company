@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import Property from '../components/Property';
 
 function ViewProperty() {
   const {id} = useParams();
@@ -74,7 +73,7 @@ function ViewProperty() {
                   <br/>
                   <button type="submit" className="btn btn-primary" onClick={() => {
                     if (newBid <= content.price) {
-                      alert("You cannot bid lower than the current highest bid");
+                      alert("You cannot bid lower than the highest bid");
                     }
                     else {
                     fetch(`http://localhost:3000/properties/${id}`, {
