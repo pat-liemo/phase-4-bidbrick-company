@@ -1,4 +1,4 @@
-# REAL-ESTATE-AUCTION-MINI-APP
+# REAL-ESTATE-AUCTION-APP
 
 #### The app is a simple Real Estate Auction App, 08/11/2023
 
