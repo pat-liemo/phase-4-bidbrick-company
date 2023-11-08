@@ -21,7 +21,7 @@ function ViewProperty() {
   function placeBid() {
     setShowBidForm(true);
     setButtonActive(true);
-  }
+  };
 
   return (
     <div className="card border-dark mb-3 style={{max-width: '14rem'}} m-4">
