@@ -55,7 +55,7 @@ function Form() {
         setType("");
         setPrice("");
       })
-  }
+  };
 
   return (
     <div id="form" className='m-5'>
