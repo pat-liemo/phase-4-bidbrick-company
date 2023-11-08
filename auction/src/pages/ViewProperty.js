@@ -20,7 +20,7 @@ function ViewProperty() {
     .then(function(data) {
       setContent(data);
     })
-  }, []);
+  }, [id]);
 
   function placeBid() {
     setShowBidForm(true);
@@ -104,7 +104,7 @@ function ViewProperty() {
             }
             <div>
               <button type="button" className="btn btn-primary me-5" onClick={placeBid} disabled={buttonActive}>Bid</button>
-              <button type="button" className="btn btn-danger ms-5" onClick={(id) => {
+              <button type="button" className="btn btn-danger ms-5" onClick={() => {
                 fetch(`http://localhost:3000/properties/${id}`, {
                   method: "DELETE"
                 })
@@ -117,6 +117,7 @@ function ViewProperty() {
                   })
 
                   setProperties(updatedProperties)
+                  setContent(updatedProperties)
                 })
               }} >Delete</button>
             </div>
