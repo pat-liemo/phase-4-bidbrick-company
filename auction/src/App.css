@@ -1,0 +1,41 @@
+#container {
+    min-height: 80vh;
+}
+
+#footer {
+    height: 20vh;
+}
+
+#form {
+    width:80vw;
+}
+
+#navlink:hover {
+    color: aqua;
+}
+
+#footer i {
+    color: aqua;
+}
+
+#about h4 {
+    color: aqua;
+}
+
+#form {
+    width:60vw;
+}
+
+img {
+    height: 480px;
+}
+
+#card {
+    border-radius: 20px;
+    background-color: rgba(105, 105, 105, 0.2);
+}
+
+#price {
+    color: rgb(1, 175, 1);
+    font-weight: bolder;
+}
