@@ -75,19 +75,23 @@ function ViewProperty() {
               <h6 style={{ display: "inline" }}>Highest Bid:</h6> <span id="price">{content.price}</span>
             </span>
             <br/><br/>
-            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+            <p className="card-text"><small className="text-muted">Last updated 1 sec ago</small></p>
             {showBidForm &&
               <form>
                   <input type="text" className="form-control" value={newBid} onChange={(event) => setNewBid(event.target.value)} placeholder="Enter your bid" />
                   <br/>
                   <button type="submit" className="btn btn-primary" onClick={(event) => {
                     event.preventDefault();
-
                     const bidAmount = parseInt(newBid, 10);
                     const currentPrice = parseInt(content.price, 10);
 
                     if (bidAmount <= currentPrice) {
-                      alert("You cannot bid lower than the highest bid");
+                      Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "You can only place a bid higher than the highest bid!",
+                        footer: '<a href="#">Read more on How to Bid...</a>'
+                      });
                     }
                     else {
                     fetch(`https://auction-react-rafd.onrender.com/properties/${id}`, {
@@ -103,9 +107,15 @@ function ViewProperty() {
                       return response.json();
                     })
                     .then(function(data) {
+                      Swal.fire({
+                        title: "Congratulations!",
+                        text: "You are our newest highest bidder!",
+                        icon: "success"
+                      });
                       setContent(data);
                     })
                   }
+                  setShowBidForm(false);
                   }}>
                     Submit
                   </button>
@@ -129,8 +139,7 @@ function ViewProperty() {
                   const updatedProperties = properties.filter(function(property) {
                     return property.id !== id;
                   })
-
-                  setProperties(updatedProperties)
+                  setProperties(updatedProperties);
 
                   Swal.fire({
                     position: "center",
