@@ -33,8 +33,9 @@
     - Congragulations! The application is now successfully running.
        
 ## Live link
-Deployed Frontend can be accessed here [Blog](https://nextblog-k-koech.vercel.app/)   
+Deployed Frontend can be accessed here [Auction](https://clever-melomakarona-a1a60e.netlify.app/)   
 
+Deployed Backend can be accessed here [Auction](https://auction-react-rafd.onrender.com)
 
 ## Known Bugs
     - The application runs smoothly. No detected bugs.
