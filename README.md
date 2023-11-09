@@ -33,7 +33,7 @@
     - Congragulations! The application is now successfully running.
        
 ## Live link
-Deployed Frontend can be accessed here [Auction](https://clever-melomakarona-a1a60e.netlify.app/)   
+Deployed Frontend can be accessed here [Auction](https://subtle-muffin-3ec6a4.netlify.app/)   
 
 Deployed Backend can be accessed here [Auction](https://auction-react-rafd.onrender.com)
 
