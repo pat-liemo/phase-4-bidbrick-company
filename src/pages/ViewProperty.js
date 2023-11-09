@@ -1,16 +1,36 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { usePropertyContext } from '../components/PropertyContext';
+// import { usePropertyContext } from '../components/PropertyContext';
 
 function ViewProperty() {
-  const { setProperties } = usePropertyContext();
-  const { properties } = usePropertyContext();
+  // const { setProperties } = usePropertyContext();
+  // const { properties } = usePropertyContext();
 
   const {id} = useParams();
   const [content, setContent] = useState({});
   const [newBid, setNewBid] = useState("");
   const [showBidForm, setShowBidForm] = useState(false);
   const [buttonActive, setButtonActive] = useState(false);
+
+  // function handleDelete() {
+  //   fetch(`https://auction-react-rafd.onrender.com/properties/${id}`, {
+  //     method: "DELETE",
+  //   })
+  //     .then(function (response) {
+  //       if (!response.ok) {
+  //         throw new Error("Failed to delete property");
+  //       }
+  //       return response.json();
+  //     })
+  //     .then(function () {
+  //       // Redirect to the property list page or perform other actions after successful delete
+  //       console.log("Property deleted successfully");
+  //     })
+  //     .catch(function (error) {
+  //       console.error(error);
+  //       // Handle error, show a message, or perform other actions
+  //     });
+  // };
 
   useEffect(function() {
     fetch(`https://auction-react-rafd.onrender.com/properties/${id}`)
@@ -104,22 +124,9 @@ function ViewProperty() {
             }
             <div>
               <button type="button" className="btn btn-primary me-5" onClick={placeBid} disabled={buttonActive}>Bid</button>
-              <button type="button" className="btn btn-danger ms-5" onClick={() => {
-                fetch(`https://auction-react-rafd.onrender.com/${id}`, {
-                  method: "DELETE"
-                })
-                .then(function(response) {
-                  return response.json();
-                })
-                .then(function(data) {
-                  const updatedProperties = properties.filter(function(property) {
-                    return property.id !== id
-                  })
-
-                  setProperties(updatedProperties)
-                  setContent(updatedProperties)
-                })
-              }} >Delete</button>
+              {/* <button type="button" className="btn btn-danger ms-5" onClick={handleDelete}>
+                Delete
+              </button> */}
             </div>
           </div>
         </div>
