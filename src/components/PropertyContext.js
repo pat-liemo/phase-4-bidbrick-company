@@ -14,7 +14,7 @@ export function PropertyProvider({ children }) {
       setProperties(data)
       
     }) 
-  },[])
+  },[properties])
 
   return (
     <PropertyContext.Provider value={{ properties, setProperties }}>

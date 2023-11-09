@@ -3,7 +3,7 @@ import LandingPage from '../components/LandingPage';
 
 function Home() {
   return (
-    <div className='m-4'>
+    <div id="home" className='m-2'>
       <h2>WELCOME TO BIDBRICK!</h2>
       <br/>
         <h6>Become a Proud Home Owner Today! 

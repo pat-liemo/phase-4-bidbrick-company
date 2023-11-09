@@ -24,7 +24,7 @@ function PropertyList() {
   }
 
   return (
-    <div className="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-center">
+    <div className="row row-cols-1 row-cols-md-4 g-5 d-flex justify-content-center">
       {properties.map((property) => (
         <Property key={property.id} property={property} />
       ))}

@@ -19,7 +19,7 @@ function Navbar() {
 
   return (
     <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-light p-4">
+        <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark bg-light p-4">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
                   <i className="fa fa-university" aria-hidden="true"></i>
