@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { usePropertyContext } from '../components/PropertyContext';
+import Swal from 'sweetalert2';
 
 function Form() {
+  const navigate = useNavigate();
+
   const { setProperties } = usePropertyContext();
   const { properties } = usePropertyContext();
 
@@ -23,7 +27,7 @@ function Form() {
         title: title,
         description: description,
         location: location,
-        type: type,
+        type: type + (type1 ? ` - ${type1}` : ""),
         bedrooms: bed,
         bathrooms: bath,
         size: size,
@@ -44,6 +48,16 @@ function Form() {
       .then(function(data) {
         const newPropertyList = [...properties, data];
         setProperties(newPropertyList);
+
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Property logged successfully!",
+          showConfirmButton: false,
+          timer: 1500
+        });
+
+        navigate('/');
 
         setTitle("");
         setLocation("");
@@ -84,8 +98,8 @@ function Form() {
             <input type="text" className="form-control" value={size} onChange={(event) => setSize(event.target.value)} placeholder='Size' />
           </div>
           <div className="col-md-4">
-            <select id="inputState" className="form-select" value={type} onChange={(event) => setType(event.target.value)}>
-              <option selected>Type...</option>
+            <select id="inputState" className="form-select" placeholder="Type" value={type} onChange={(event) => setType(event.target.value)}>
+              <option selected>{""}</option>
               <option>Mansion</option>
               <option>Condo</option>
               <option>Villa</option>

@@ -1,36 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-// import { usePropertyContext } from '../components/PropertyContext';
+import { useNavigate } from 'react-router-dom';
+import { usePropertyContext } from '../components/PropertyContext';
+import Swal from 'sweetalert2';
 
 function ViewProperty() {
-  // const { setProperties } = usePropertyContext();
-  // const { properties } = usePropertyContext();
+
+  const { setProperties } = usePropertyContext();
+  const { properties } = usePropertyContext();
+  const navigate = useNavigate();
 
   const {id} = useParams();
   const [content, setContent] = useState({});
   const [newBid, setNewBid] = useState("");
   const [showBidForm, setShowBidForm] = useState(false);
   const [buttonActive, setButtonActive] = useState(false);
-
-  // function handleDelete() {
-  //   fetch(`https://auction-react-rafd.onrender.com/properties/${id}`, {
-  //     method: "DELETE",
-  //   })
-  //     .then(function (response) {
-  //       if (!response.ok) {
-  //         throw new Error("Failed to delete property");
-  //       }
-  //       return response.json();
-  //     })
-  //     .then(function () {
-  //       // Redirect to the property list page or perform other actions after successful delete
-  //       console.log("Property deleted successfully");
-  //     })
-  //     .catch(function (error) {
-  //       console.error(error);
-  //       // Handle error, show a message, or perform other actions
-  //     });
-  // };
 
   useEffect(function() {
     fetch(`https://auction-react-rafd.onrender.com/properties/${id}`)
@@ -48,7 +32,8 @@ function ViewProperty() {
   };
 
   return (
-    <div className="card border-dark mb-3 style={{max-width: '14rem'}} m-4">
+    <div className="card border-dark mb-3 m-4" style={{ maxWidth: '1700px' }}>
+
       <div className="row g-0">
         <div className="col-md-4">
           <img src={content.image} className="img-fluid rounded-start" alt="..."/>
@@ -95,8 +80,13 @@ function ViewProperty() {
               <form>
                   <input type="text" className="form-control" value={newBid} onChange={(event) => setNewBid(event.target.value)} placeholder="Enter your bid" />
                   <br/>
-                  <button type="submit" className="btn btn-primary" onClick={() => {
-                    if (newBid <= content.price) {
+                  <button type="submit" className="btn btn-primary" onClick={(event) => {
+                    event.preventDefault();
+
+                    const bidAmount = parseInt(newBid, 10);
+                    const currentPrice = parseInt(content.price, 10);
+
+                    if (bidAmount <= currentPrice) {
                       alert("You cannot bid lower than the highest bid");
                     }
                     else {
@@ -106,7 +96,7 @@ function ViewProperty() {
                         "Content-Type": "application/json",
                       },
                       body: JSON.stringify({
-                        price: newBid
+                        price: bidAmount
                       })
                     })
                     .then(function(response) {
@@ -124,9 +114,38 @@ function ViewProperty() {
             }
             <div>
               <button type="button" className="btn btn-primary me-5" onClick={placeBid} disabled={buttonActive}>Bid</button>
-              {/* <button type="button" className="btn btn-danger ms-5" onClick={handleDelete}>
+
+              <button 
+               type="button"
+               className="btn btn-danger ms-5" 
+               onClick={() => {
+                fetch(`https://auction-react-rafd.onrender.com/properties/${id}`, {
+                  method: "DELETE"
+                })
+                .then(function(response) {
+                  return response.json();
+                })
+                .then(function(data) {
+                  const updatedProperties = properties.filter(function(property) {
+                    return property.id !== id;
+                  })
+
+                  setProperties(updatedProperties)
+
+                  Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Property deleted successfully!",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+
+                  navigate('/');
+                })
+              }} 
+              >
                 Delete
-              </button> */}
+              </button>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@
       "bedrooms": 4,
       "bathrooms": 3,
       "size": "3,000 sq. ft.",
-      "price": "$2,500,000",
+      "price": "2,500,000",
       "image": "https://i.pinimg.com/564x/03/1b/71/031b719c5de8edd5c7e96402f9ff2b0b.jpg"
     },
     {
@@ -21,7 +21,7 @@
       "bedrooms": 1,
       "bathrooms": 1,
       "size": "800 sq. ft.",
-      "price": "$900,000",
+      "price": "900,000",
       "image": "https://i.pinimg.com/564x/44/7e/5b/447e5bae8ca6b51d5744374bf91c4b69.jpg"
     },
     {
@@ -33,7 +33,7 @@
       "bedrooms": 2,
       "bathrooms": 2,
       "size": "1,200 sq. ft.",
-      "price": "$450,000",
+      "price": "450,000",
       "image": "https://i.pinimg.com/564x/37/cf/d3/37cfd301ab54ca59dadd8e802146ab8b.jpg"
     },
     {
@@ -45,7 +45,7 @@
       "bedrooms": 3,
       "bathrooms": 3,
       "size": "2,500 sq. ft.",
-      "price": "$2,200,000",
+      "price": "2,200,000",
       "image": "https://i.pinimg.com/564x/b6/d6/e4/b6d6e4c20b09471d064d0528a26a8464.jpg"
     },
     {
@@ -57,7 +57,7 @@
       "bedrooms": 5,
       "bathrooms": 4,
       "size": "5,000 sq. ft.",
-      "price": "$4,500,000",
+      "price": "4,500,000",
       "image": "https://i.pinimg.com/564x/8c/9c/ca/8c9cca92f071987e987f659283dc0913.jpg"
     },
     {
@@ -69,7 +69,7 @@
       "bedrooms": 2,
       "bathrooms": 2,
       "size": "1,100 sq. ft.",
-      "price": "$1,100,000",
+      "price": "1,100,000",
       "image": "https://i.pinimg.com/564x/bc/2b/de/bc2bdec8a02c166dd4f5c1772ab18366.jpg"
     },
     {
@@ -81,7 +81,7 @@
       "bedrooms": 3,
       "bathrooms": 2,
       "size": "1,800 sq. ft.",
-      "price": "$950,000",
+      "price": "950,000",
       "image": "https://i.pinimg.com/564x/9b/5b/c7/9b5bc75d7f14a5e54ec14db98b27e9a8.jpg"
     },
     {
@@ -93,7 +93,7 @@
       "bedrooms": 4,
       "bathrooms": 3,
       "size": "2,200 sq. ft.",
-      "price": "$1,600,000",
+      "price": "1,600,000",
       "image": "https://i.pinimg.com/564x/a8/a4/57/a8a457915f3a80f504d6e599f8ed2168.jpg"
     },
     {
@@ -105,7 +105,7 @@
       "bedrooms": 5,
       "bathrooms": 4,
       "size": "3,500 sq. ft.",
-      "price": "$2,800,000",
+      "price": "2,800,000",
       "image": "https://i.pinimg.com/564x/9b/76/b3/9b76b328dea55e08337537a1ffca130c.jpg"
     },
     {
@@ -117,7 +117,7 @@
       "bedrooms": 10,
       "bathrooms": 8,
       "size": "10,000 sq. ft.",
-      "price": "$7,500,000",
+      "price": "7,500,000",
       "image": "https://i.pinimg.com/564x/b7/22/e2/b722e21ebdd0778a064b09d6407c945d.jpg"
     },
     {
@@ -141,7 +141,7 @@
       "bedrooms": 4,
       "bathrooms": 3,
       "size": "2,300 sq. ft.",
-      "price": "$1,750,000",
+      "price": "1,750,000",
       "image": "https://i.pinimg.com/564x/e2/c9/fe/e2c9fe95347b2db2d1f306beb3ba2090.jpg"
     },
     {
@@ -153,7 +153,7 @@
       "bedrooms": 6,
       "bathrooms": 6,
       "size": "5,000 sq. ft.",
-      "price": "$5,800,000",
+      "price": "5,800,000",
       "image": "https://i.pinimg.com/564x/7e/9b/c2/7e9bc2d8029c98817bcca7f41921bc19.jpg"
     },
     {
@@ -165,7 +165,7 @@
       "bedrooms": 7,
       "bathrooms": 5,
       "size": "6,500 sq. ft.",
-      "price": "$4,200,000",
+      "price": "4,200,000",
       "image": "https://i.pinimg.com/564x/a8/b0/8b/a8b08bdad696dd010d93457361b0162b.jpg"
     },
     {
@@ -177,14 +177,14 @@
       "bedrooms": 4,
       "bathrooms": 3,
       "size": "2,800 sq. ft.",
-      "price": "$1,250,000",
+      "price": "1,250,000",
       "image": "https://i.pinimg.com/564x/9d/68/ff/9d68ffed03e2cb763acd7eb57e96b48e.jpg"
     },
     {
       "id": 16,
       "title": "Modern Beachfront Villa",
       "location": "Malibu, California",
-      "price": "$4,250,000",
+      "price": "4,250,000",
       "image": "https://i.pinimg.com/564x/fb/fb/08/fbfb08829cc1ae147f3e927e44c0f2e7.jpg",
       "bedrooms": 4,
       "bathrooms": 3,
@@ -196,7 +196,7 @@
       "id": 17,
       "title": "Luxury Downtown Apartment",
       "location": "New York City, New York",
-      "price": "$2,950,000",
+      "price": "2,950,000",
       "image": "https://i.pinimg.com/564x/37/cf/d3/37cfd301ab54ca59dadd8e802146ab8b.jpg",
       "bedrooms": 2,
       "bathrooms": 2,
@@ -208,7 +208,7 @@
       "id": 18,
       "title": "Rustic Mountain Cabin",
       "location": "Aspen, Colorado",
-      "price": "$1,500,000",
+      "price": "1,500,000",
       "image": "https://i.pinimg.com/564x/b6/d6/e4/b6d6e4c20b09471d064d0528a26a8464.jpg",
       "bedrooms": 3,
       "bathrooms": 2,
@@ -220,7 +220,7 @@
       "id": 19,
       "title": "Historic Colonial Estate",
       "location": "Charleston, South Carolina",
-      "price": "$3,750,000",
+      "price": "3,750,000",
       "image": "https://i.pinimg.com/564x/8c/9c/ca/8c9cca92f071987e987f659283dc0913.jpg",
       "bedrooms": 5,
       "bathrooms": 4,
@@ -232,7 +232,7 @@
       "id": 20,
       "title": "Secluded Forest Retreat",
       "location": "Lake Tahoe, California",
-      "price": "$1,800,000",
+      "price": "1,800,000",
       "image": "https://i.pinimg.com/564x/bc/2b/de/bc2bdec8a02c166dd4f5c1772ab18366.jpg",
       "bedrooms": 2,
       "bathrooms": 2,
@@ -244,7 +244,7 @@
       "id": 21,
       "title": "Contemporary Penthouse",
       "location": "Miami, Florida",
-      "price": "$5,500,000",
+      "price": "5,500,000",
       "image": "https://i.pinimg.com/564x/b5/d8/da/b5d8da910f3023cbf57d20b4bc038b7e.jpg",
       "bedrooms": 3,
       "bathrooms": 3,
@@ -256,7 +256,7 @@
       "id": 22,
       "title": "Vibrant City Loft",
       "location": "San Francisco, California",
-      "price": "$2,200,000",
+      "price": "2,200,000",
       "image": "https://i.pinimg.com/564x/5d/18/22/5d1822d6afbb3f3878bdaad1aa04811c.jpg",
       "bedrooms": 1,
       "bathrooms": 1,
@@ -268,7 +268,7 @@
       "id": 23,
       "title": "Mountain View Chalet",
       "location": "Whistler, British Columbia",
-      "price": "$1,650,000",
+      "price": "1,650,000",
       "image": "https://i.pinimg.com/564x/8b/62/70/8b6270e7ac5c19be912f6af7d4b20b11.jpg",
       "bedrooms": 4,
       "bathrooms": 3,
@@ -280,7 +280,7 @@
       "id": 24,
       "title": "Elegant Lakeside Mansion",
       "location": "Geneva, Switzerland",
-      "price": "$7,200,000",
+      "price": "7,200,000",
       "image": "https://i.pinimg.com/564x/e6/f4/a6/e6f4a6d5b4f75e8a53f854c783479c36.jpg",
       "bedrooms": 6,
       "bathrooms": 5,
@@ -292,7 +292,7 @@
       "id": 25,
       "title": "Private Island Paradise",
       "location": "Fiji",
-      "price": "$10,000,000",
+      "price": "10,000,000",
       "image": "https://i.pinimg.com/564x/a3/20/ea/a320eab0ca82568a12a7cc397aab6529.jpg",
       "bedrooms": 8,
       "bathrooms": 7,
@@ -304,7 +304,7 @@
       "id": 26,
       "title": "Historic French Chateau",
       "location": "Loire Valley, France",
-      "price": "€5,500,000",
+      "price": "5,500,000",
       "image": "https://i.pinimg.com/564x/03/26/a9/0326a971647752133435a4bcdf9d2a12.jpg",
       "bedrooms": 9,
       "bathrooms": 8,
@@ -316,7 +316,7 @@
       "id": 27,
       "title": "Exquisite Desert Oasis",
       "location": "Dubai, UAE",
-      "price": "AED 12,000,000",
+      "price": "12,000,000",
       "image": "https://i.pinimg.com/564x/a6/71/60/a67160b9e3c9d194e072222f92727dd8.jpg",
       "bedrooms": 6,
       "bathrooms": 6,
@@ -333,7 +333,7 @@
       "bedrooms": 5,
       "bathrooms": 4,
       "size": "3,500 sq. ft.",
-      "price": "$2,800,000",
+      "price": "2,800,000",
       "image": "https://i.pinimg.com/564x/29/51/91/29519141e83f9d3bcc372b7eb44dfde7.jpg"
     }
   ]
